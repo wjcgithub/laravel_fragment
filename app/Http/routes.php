@@ -36,3 +36,7 @@ Route::get('blog/{slug}', 'BlogController@showPost');
 Route::get('/hello/laravelacademy',['as'=>'academy',function(){
     return 'Hello LaravelAcademy！';
 }]);
+
+Route::get('/test/customfacade',['as'=>'cf','uses'=>'TestController@customfacade']);
+
+//Route::controller('test', 'TestController');
