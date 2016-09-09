@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c4daf1b9e1f02097a48f70f35442f2fd",
-    "content-hash": "214f73f0cc3b2f9d1a8c3780ef56e52b",
+    "hash": "ff3b23383ecb3595351f1583b6bf316a",
+    "content-hash": "7b31c0d0b6e050ed025de5a508131a09",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1932,20 +1932,23 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v2.7.18",
+            "version": "v2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "fd3a4446b659f1472a55e3b55af486afbdb40185"
+                "reference": "120b187ec46215f7a53a506e53aa91a81c82a082"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/symfony/var-dumper/fd3a4446b659f1472a55e3b55af486afbdb40185.zip",
-                "reference": "fd3a4446b659f1472a55e3b55af486afbdb40185",
+                "url": "https://packagist.phpcomposer.com/files/symfony/var-dumper/120b187ec46215f7a53a506e53aa91a81c82a082.zip",
+                "reference": "120b187ec46215f7a53a506e53aa91a81c82a082",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
             },
             "suggest": {
                 "ext-symfony_debug": ""
@@ -1962,10 +1965,7 @@
                 ],
                 "psr-4": {
                     "Symfony\\Component\\VarDumper\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1987,7 +1987,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2016-09-06 07:26:07"
+            "time": "2015-05-02 15:21:08"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -2138,6 +2138,52 @@
                 "fixtures"
             ],
             "time": "2016-04-29 12:21:54"
+        },
+        {
+            "name": "goaop/parser-reflection",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/goaop/parser-reflection.git",
+                "reference": "729adbe8ee8c7438a38cce47823d967f67f28d3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/goaop/parser-reflection/729adbe8ee8c7438a38cce47823d967f67f28d3f.zip",
+                "reference": "729adbe8ee8c7438a38cce47823d967f67f28d3f",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "^1.2|^2.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Go\\ParserReflection\\": "src"
+                },
+                "files": [
+                    "src/bootstrap.php"
+                ],
+                "exclude-from-classmap": [
+                    "/tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Lisachenko",
+                    "email": "lisachenko.it@gmail.com"
+                }
+            ],
+            "description": "Provides reflection information, based on raw source",
+            "time": "2016-02-27 13:41:20"
         },
         {
             "name": "hamcrest/hamcrest-php",
