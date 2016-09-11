@@ -39,4 +39,18 @@ Route::get('/hello/laravelacademy',['as'=>'academy',function(){
 
 Route::get('/test/customfacade',['as'=>'cf','uses'=>'TestController@customfacade']);
 
-//Route::controller('test', 'TestController');
+Route::get('/member/index', 'MemberController@index');
+
+
+Route::get('test1', ['uses'=>'StudentController@test1']);
+Route::get('querybuilderinsert', ['uses'=>'StudentController@querybuilderinsert']);
+Route::get('querybuilderupdate', ['uses'=>'StudentController@querybuilderupdate']);
+Route::get('querybuilderdelete', ['uses'=>'StudentController@querybuilderdelete']);
+Route::get('querybuilderselect', ['uses'=>'StudentController@querybuilderselect']);
+Route::get('querybuilderjuhe', ['uses'=>'StudentController@querybuilderjuhe']);
+
+    Route::get('ormselect', ['uses'=>'StudentController@ormselect']);  //查询
+    Route::get('orminsert', ['uses'=>'StudentController@orminsert']);  //新增
+    Route::get('ormupdate', ['uses'=>'StudentController@ormupdate']);  //更新
+
+
