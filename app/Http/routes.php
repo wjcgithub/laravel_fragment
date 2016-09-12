@@ -49,8 +49,10 @@ Route::get('querybuilderdelete', ['uses'=>'StudentController@querybuilderdelete'
 Route::get('querybuilderselect', ['uses'=>'StudentController@querybuilderselect']);
 Route::get('querybuilderjuhe', ['uses'=>'StudentController@querybuilderjuhe']);
 
-    Route::get('ormselect', ['uses'=>'StudentController@ormselect']);  //查询
-    Route::get('orminsert', ['uses'=>'StudentController@orminsert']);  //新增
-    Route::get('ormupdate', ['uses'=>'StudentController@ormupdate']);  //更新
+Route::get('ormselect', ['uses'=>'StudentController@ormselect']);  //查询
+Route::get('orminsert', ['uses'=>'StudentController@orminsert']);  //新增
+Route::get('ormupdate', ['uses'=>'StudentController@ormupdate']);  //更新
 
 
+    Route::get('section1', ['uses'=>'StudentController@section1']);  //更新
+    Route::get('urltest', ['as' => 'urlalias', 'uses'=>'StudentController@urlTest']);  //更新

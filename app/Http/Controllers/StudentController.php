@@ -322,4 +322,21 @@ class StudentController extends Controller
         $num = Student::where('id', '>=', 6)->delete();
         dd($num);
     }
+
+    public function section1()
+    {
+        $name = 'lisi';
+        $arr = [1,2,2.5,3,4];
+        return view('student.section1', [
+            'name' => $name,
+            'arr' => $arr
+        ]);
+    }
+
+    public function urlTest()
+    {
+        url('urltest');
+        action('StudentController@urlTest');
+        route('urlalias');
+    }
 }
