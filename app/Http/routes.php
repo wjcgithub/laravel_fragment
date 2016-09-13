@@ -54,5 +54,22 @@ Route::get('orminsert', ['uses'=>'StudentController@orminsert']);  //新增
 Route::get('ormupdate', ['uses'=>'StudentController@ormupdate']);  //更新
 
 
-    Route::get('section1', ['uses'=>'StudentController@section1']);  //更新
-    Route::get('urltest', ['as' => 'urlalias', 'uses'=>'StudentController@urlTest']);  //更新
+Route::get('section1', ['uses'=>'StudentController@section1']);  //更新
+Route::get('urltest', ['as' => 'urlalias', 'uses'=>'StudentController@urlTest']);  //更新
+
+Route::get('/res1', 'ResponseController@res1');
+Route::get('/res2', 'ResponseController@res2');
+Route::get('/redirect1', [
+    'as' => 'redir1',
+    'uses' => 'ResponseController@redirect1'
+]);
+
+Route::get('activity', ['uses'=>'MiddleController@activity']);  //更新
+
+Route::group(['middleware' => ['activity']], function (){
+    Route::get('activity1', ['uses'=>'MiddleController@activity1']);  //更新
+    Route::get('activity2', ['uses'=>'MiddleController@activity2']);  //更新
+});
+
+
+
