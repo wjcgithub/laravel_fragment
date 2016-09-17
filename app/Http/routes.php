@@ -16,3 +16,8 @@
     });
 
     Route::get('student/index', ['uses'=>'StudentController@index']);
+    Route::any('student/create', ['uses'=>'StudentController@create']);
+    Route::any('student/save', ['uses'=>'StudentController@save']);
+    Route::any('student/update/{id}', ['uses'=>'StudentController@update']);
+    Route::get('student/detail/{id}', ['uses'=>'StudentController@detail']);
+    Route::get('student/delete/{id}', ['uses'=>'StudentController@delete']);

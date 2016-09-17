@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
+    const SEX_UN = 10;
+    const SEX_BOY = 20;
+    const SEX_GRIL = 30;
+
     //对应的模型表，默认情况下是模型名的复数
     protected $table = 'student';
 
@@ -16,7 +20,7 @@ class Student extends Model
     public $timestamps = true;
 
     //允许批量赋值的子段
-    protected $fillable = ['name','age'];
+    protected $fillable = ['name','age','sex'];
 
     //不允许批量赋值的子段
     protected $guarded = [];
@@ -31,5 +35,20 @@ class Student extends Model
     protected function asDateTime ( $value )
     {
         return $value;
+    }
+
+    public function getSex($key = null)
+    {
+        $arr = [
+            self::SEX_UN => '未知',
+            self::SEX_BOY => '男',
+            self::SEX_GRIL => '女',
+        ];
+
+        if ($key !== null) {
+            return array_key_exists($key, $arr) ? $arr[$key] : $arr[self::SEX_UN];
+        }
+
+        return $arr;
     }
 }
