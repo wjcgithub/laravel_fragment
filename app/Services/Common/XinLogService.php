@@ -1,14 +1,41 @@
 <?php
-namespace App\Services;
+namespace App\Services\Common;
 
-use App\Entity\AsyncData;
-use Config;
-use App\Library\Common;
+use App\Contracts\LogContract;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
 
-class XinLogService extends XinService
+class XinLogService implements LogContract
 {
+    static private $logFile = 'buycar_access.log';
+
     public function __construct()
     {
+        echo __CLASS__."<hr>";
+    }
+
+    /**
+     * 记录接口访问日志
+     * @return \Closure
+     */
+    public function accessLog()
+    {
+        $fun = function ($data, \Closure $next)
+        {
+            $req = $data['req'];
+            $logObj = App::make('App\Contracts\LogContract');
+            if (in_array(env('APP_ENV'),['local','testing'])) {
+                //记录到本地
+                $logObj->addInfo(json_encode($req), self::$logFile,'',1);
+            }else{
+                //记录到服务器
+                $logObj->addInfo(json_encode($req), self::$logFile);
+            }
+
+            return $next($data);
+        };
+
+        return $fun;
     }
 
     /**

@@ -3,8 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Services\XinLogService;
-//use App\Facades\Test;
+use App\Services\Common\XinLogService;
 
 class XinLogServiceProvider extends ServiceProvider
 {
@@ -29,8 +28,9 @@ class XinLogServiceProvider extends ServiceProvider
             return new XinLogService();
         });
 
-        $this->app->bind('App\Contracts\TestContract',function(){
-            return new TestService();
-        });
+        // true 表示共享模式开启
+        $this->app->bind('App\Contracts\LogContract',function(){
+            return new XinLogService();
+        },true);
     }
 }

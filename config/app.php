@@ -149,6 +149,9 @@ return [
          * Custom Service Providers...
          */
         App\Providers\TestServiceProvider::class,
+        App\Providers\XinLogServiceProvider::class,
+
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -202,6 +205,7 @@ return [
          * custom alias
          */
         'TestClass' => App\Facades\TestClass::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 

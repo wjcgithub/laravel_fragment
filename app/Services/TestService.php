@@ -15,4 +15,17 @@ class TestService implements TestContract
     {
         dd('Call Me From TestServiceProvider In '.$controller);
     }
+
+    public function handle($data, \Closure $next, $method)
+    {
+        $this->$method($data, $next);
+    }
+
+    public function indexValidate($data, \Closure $next)
+    {
+        echo "testvalidate";
+        $result = $next($data);
+        echo "<hr>pipe5:  middle pipe perform success<hr>";
+        return $result;
+    }
 }
