@@ -9,7 +9,9 @@
         "laravel/framework": "5.1.*",
         "michelf/php-markdown": "^1.6",
         "michelf/php-smartypants": "1.6.0-beta1",
-        "barryvdh/laravel-debugbar": "^2.3"
+        "barryvdh/laravel-debugbar": "^2.3",
+        "pda/pheanstalk": "^3.1",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -13,3 +13,10 @@
 
 Route::get('pipe', 'PipeController@index');
 Route::get('reduce', 'PipeController@reduce');
+
+//queue
+Route::get('addqueue', 'QueueController@reduce');
+Route::get('mail/send/queue/{id}', 'QueueController@sendReminderEmail');
+
+//email
+Route::get('mail/send','MailController@send');
