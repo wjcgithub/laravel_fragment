@@ -83,4 +83,4 @@ stdout_logfile=/home/wwwlogs/my_laravel_test/worker-queue-high.log
 
 ## 接下来
 - 打算用d3js做一个基于beanstalkd的实时队列查看
-- 服务端使用　http://www.workerman.net/web-sender改造（如果您有更好的麻烦告诉我哦）
+- 服务端使用　http://www.workerman.net/web-sender　改造（如果您有更好的麻烦告诉我哦）
