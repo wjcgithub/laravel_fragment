@@ -61,16 +61,25 @@ stdout_logfile=/home/wwwlogs/my_laravel_test/worker-queue-high.log
 ```
 
 ### 使用supervisor
-- `/etc/init.d/supervisor [start|stop|restart|status]`
+
+#### 写好配置文件执行下面的命令开启消费者
 - sudo supervisorctl reread
 - sudo supervisorctl update
-- sudo supervisorctl status 
 - sudo supervisorctl start queue-emails:* queue-high:*
+- sudo supervisorctl status 
 
+#### 启动supervisor 服务
+- `/etc/init.d/supervisor [start|stop|restart|status]`
+
+## beanstalkd
+- `/etc/init.d/beanstalkd [start|stop|restart|status]`
 
 ## queue:work 注意
 - 如果更换队列驱动别忘了修改最后的参数
 - `php artisan queue:work [options] [--] [<connection>]`
+
+## 入队操作
+- http://local.laravel.test.com/mail/send/queue/1
 
 ## 接下来
 打算用d3js做一个基于beanstalkd的实时队列查看
