@@ -7,34 +7,34 @@ http://laravelacademy.org/post/6125.html
 http://laravelacademy.org/post/1986.html
 
 ## ．env配置
-APP_ENV=local
-APP_DEBUG=true
-APP_KEY=WXXCxREmmoAzwzJz8XTXHpZsg2r5XTsg
+- APP_ENV=local
+- APP_DEBUG=true
+- APP_KEY=WXXCxREmmoAzwzJz8XTXHpZsg2r5XTsg
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_DATABASE=laravel_study
-DB_USERNAME=laravel
-DB_PASSWORD=123456
+- DB_CONNECTION=mysql
+- DB_HOST=127.0.0.1
+- DB_DATABASE=laravel_study
+- DB_USERNAME=laravel
+- DB_PASSWORD=123456
 
-CACHE_DRIVER=file
-SESSION_DRIVER=file
-QUEUE_DRIVER=beanstalkd
+- CACHE_DRIVER=file
+- SESSION_DRIVER=file
+- QUEUE_DRIVER=beanstalkd
 
-REDIS_HOST=127.0.0.1
-REDIS_PASSWORD=null
-REDIS_PORT=6379
+- REDIS_HOST=127.0.0.1
+- REDIS_PASSWORD=null
+- REDIS_PORT=6379
 
-MAIL_DRIVER=smtp
-MAIL_HOST=smtp.sina.com.cn
-MAIL_PORT=25
-MAIL_USERNAME=wjc163@sina.cn
-MAIL_PASSWORD=
-MAIL_ENCRYPTION=null
-MAIL_PRETEND=1
-MAIL_ADDRESS=wjc163@sina.cn
+- MAIL_DRIVER=smtp
+- MAIL_HOST=smtp.sina.com.cn
+- MAIL_PORT=25
+- MAIL_USERNAME=wjc163@sina.cn
+- MAIL_PASSWORD=
+- MAIL_ENCRYPTION=null
+- MAIL_PRETEND=1
+- MAIL_ADDRESS=wjc163@sina.cn
 
-APP_LOG=daily
+- APP_LOG=daily
 
 ## supervisor配置
 ```powershell
