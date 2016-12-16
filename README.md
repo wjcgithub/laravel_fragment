@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # laravel 邮件队列
 
 ## laravel　队列配置
@@ -88,3 +89,8 @@ stdout_logfile=/home/wwwlogs/my_laravel_test/worker-queue-high.log
 
 - 服务端使用　http://www.workerman.net/web-sender
 - 改造（如果您有更好的麻烦告诉我哦）
+=======
+# laravel 入门学习
+1. blade-study 分支　是一个学生管理CURD, 不删除
+2. study_pipe 分支 尝试使用pipe使程序业务分离
+>>>>>>> 51203d4876dd9197b1e751eb52a444b163c78a0b
