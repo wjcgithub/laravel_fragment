@@ -19,11 +19,12 @@ class QueueController extends Controller
      */
     public function sendReminderEmail(Request $request, $id)
     {
+        $userqueue = array_rand(['default'=>'default','emails'=>'emails','queue-high'=>'queue-high']);
         $user = User::findOrFail($id);
         $task = new AsyncData();
         $task->setServiceName('SendMail')
             ->setParams(['user' => $user])
-            ->setQueue(AsyncData::HIGH)
+            ->setQueue($userqueue)
             ->setDelays(0);
         return CommonService::getInstance()->createAsyncTask($task);
     }
